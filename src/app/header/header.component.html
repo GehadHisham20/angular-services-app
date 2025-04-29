@@ -1,12 +1,25 @@
-<div class="header-container">
-  <div class="header-logo">MYSITE</div>
-  <div class="header-nav">
-    <a href="#" (click)="HomeClicked()">HOME</a>
-    <a href="#" (click)="AdminClicked()">ADMIN</a>
-    <button class="header-button" (click)="onSubscribe()">SUBSCRIBE</button>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" class="navbar-brand">Recipe Book</a>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Recipes</a></li>
+        <li><a href="#">Shopping List</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" role="button"
+            >Manage <span class="caret"></span
+          ></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Save Data</a></li>
+            <li><a href="#">Fetch Data</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
-<div [ngSwitch]="selectedTab">
-  <app-home *ngSwitchCase="'home'"></app-home>
-  <app-admin *ngSwitchCase="'admin'"></app-admin>
-</div>
+</nav>
