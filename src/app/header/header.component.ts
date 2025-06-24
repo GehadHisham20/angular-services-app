@@ -7,7 +7,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class HeaderComponent {
   @Output() changeCurrentTab = new EventEmitter<string>();
 
-  onClickNavigation(tab: string) {
-    this.changeCurrentTab.emit(tab);
-  }
+  // onClickNavigation(tab: string) {
+  //   this.changeCurrentTab.emit(tab);
+  // }
 }
