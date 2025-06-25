@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class RecipeDetailComponent implements OnInit {
   recipe!: Recipe; // "!:" Tell TypeScript “don’t worry, Angular will assign this later.”
+  id!: number;
 
   constructor(
     private RecipeService: RecipeService,
@@ -22,6 +23,7 @@ export class RecipeDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
+      this.id = params['id'];
       this.recipe = this.RecipeService.getRecipeById(params['id']);
     });
   }
